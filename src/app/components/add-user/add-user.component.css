@@ -1,0 +1,13 @@
+.mdc-card {
+    margin: 2%;
+    border: none
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* height: 70vh; */
+    overflow-y: auto;
+    /* margin: 10px 0px; */
+}

@@ -1,0 +1,57 @@
+<mat-card appearance="outlined">
+    <mat-card-header>
+        <h2>{{title()}}</h2>
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="userForm" (ngSubmit)="this.dialogData.userId ? edituser() : addUser()" class="form-section">
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Date of Birth</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="dob">
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput type="email" formControlName="email">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Phone</mat-label>
+                <input matInput type="number" formControlName="phone">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Role</mat-label>
+                <mat-select formControlName="role">
+                    <mat-option value="" disabled="true" [hidden]="true">Select Role</mat-option>
+                    <mat-option value="admin">Admin</mat-option>
+                    <mat-option value="manager">Manager</mat-option>
+                    <mat-option value="lead">Lead</mat-option>
+                    <mat-option value="operator">Operator</mat-option>
+                    <mat-option value="user">User</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field floatLabel="always">
+                <mat-label>Salary</mat-label>
+                <input matInput type="number" class="example-right-align" placeholder="0" formControlName="salary">
+                <span matTextPrefix>$&nbsp;</span>
+            </mat-form-field>
+            <mat-card-actions>
+                @if(this.dialogData.userId){
+                <button mat-raised-button type="submit" color="primary">Edit</button>
+                }@else {
+                <button mat-raised-button type="submit" color="primary">Submit</button>
+                }
+                <button mat-raised-button type="button" color="accent" (click)="closePopup()">Cancle</button>
+            </mat-card-actions>
+        </form>
+    </mat-card-content>
+    <!-- <mat-card-footer>
+        <div class="card-footer-section">
+            <button mat-raised-button>Submit</button>
+            <button mat-raised-button>Cancle</button>
+        </div>
+    </mat-card-footer> -->
+</mat-card>

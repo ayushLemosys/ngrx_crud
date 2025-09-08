@@ -1,0 +1,31 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "name": "Vikram Betal",
+      "dob": "2025-09-04T12:28:08.554Z",
+      "email": "VB123@gmail.com",
+      "phone": 963258741,
+      "role": "operator",
+      "salary": 52000
+    },
+    {
+      "id": 2,
+      "name": "Swapnil",
+      "dob": "2025-09-08T09:37:38.377Z",
+      "email": "gdfgs@gmail.com",
+      "phone": 952147231,
+      "role": "operator",
+      "salary": 8500
+    },
+    {
+      "id": "3",
+      "name": "Jayesh sir",
+      "dob": "2000-12-31T18:30:00.000Z",
+      "email": "JD@gmail.com",
+      "phone": 963254178,
+      "role": "admin",
+      "salary": 56000
+    }
+  ]
+}
